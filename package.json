@@ -17,8 +17,9 @@
     "tailwind:build": "tailwind-config-viewer export ./tailwind-static",
     "tailwind:view": "tailwind-config-viewer -o",
     "script": "ts-node -O '{\"module\": \"commonjs\"}'",
-    "buildt": "npm run build -- --mode docker --skip-plugins webpack-bundle-analyzer && lite-server --baseDir='dist' --host=0.0.0.0:3000"
-  },
+    "buildt": "npm run build -- --mode docker --skip-plugins webpack-bundle-analyzer && lite-server --baseDir='dist' --host=0.0.0.0:3000",
+    "servet": "lite-server --baseDir='dist' --host=0.0.0.0:3000"
+},
   "devDependencies": {
     "@aave/protocol-js": "^4.3.0",
     "@babel/core": "^7.13.8",

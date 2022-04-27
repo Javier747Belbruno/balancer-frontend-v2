@@ -88,7 +88,7 @@ const config: Record<Network | number, Config> = {
   12345: test,
   // @ts-ignore
   17: docker,
-  31337: testlocal,
+  31337: testlocal
 };
 
 export default config;

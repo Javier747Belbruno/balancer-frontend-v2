@@ -61,7 +61,7 @@ export const TOKEN_LIST_MAP: TokenListMapByNetwork = {
     },
     External: ['https://tracer.finance/tokens']
   },
-    '31337': {
+  '31337': {
     Balancer: {
       Default:
         'https://raw.githubusercontent.com/balancer-labs/assets/refactor-for-multichain/generated/kovan.listed.tokenlist.json',
