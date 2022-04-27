@@ -74,6 +74,7 @@ export class Multicaller {
   }
 
   call(path, address, fn, params?): Multicaller {
+    //console.log('call ->', path, fn);
     this.calls.push([address, fn, params]);
     this.paths.push(path);
     return this;
@@ -81,6 +82,7 @@ export class Multicaller {
 
   async execute<T = any>(from?: any): Promise<T> {
     const obj = from || {};
+    console.log('execute ->', this.network, this.provider, this.abi, this.options, this.calls);
     const result = await multicall(
       this.network,
       this.provider,

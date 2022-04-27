@@ -21,6 +21,12 @@ export default class RpcProviderService {
     this.jsonProvider = new JsonRpcBatchProvider(this.config.rpc);
     this.wsProvider = new WebSocketProvider(this.config.ws);
     this.loggingProvider = new JsonRpcBatchProvider(this.config.loggingRpc);
+    console.log(
+      this.network,
+      this.jsonProvider,
+      this.wsProvider,
+      this.loggingProvider
+    );
   }
 
   public initBlockListener(newBlockHandler: NewBlockHandler): void {

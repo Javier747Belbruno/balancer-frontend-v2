@@ -16,7 +16,8 @@
     "prepare": "node ./prepare.js",
     "tailwind:build": "tailwind-config-viewer export ./tailwind-static",
     "tailwind:view": "tailwind-config-viewer -o",
-    "script": "ts-node -O '{\"module\": \"commonjs\"}'"
+    "script": "ts-node -O '{\"module\": \"commonjs\"}'",
+    "buildt": "npm run build -- --mode docker --skip-plugins webpack-bundle-analyzer && lite-server --baseDir='dist' --host=0.0.0.0:3000"
   },
   "devDependencies": {
     "@aave/protocol-js": "^4.3.0",
@@ -121,5 +122,8 @@
     "worker-loader": "^3.0.8"
   },
   "license": "MIT",
-  "repository": "balancer-labs/frontend-v2"
+  "repository": "balancer-labs/frontend-v2",
+  "dependencies": {
+    "lite-server": "^2.6.1"
+  }
 }

@@ -10,6 +10,7 @@ export async function subgraphRequest(url: string, query, options: any = {}) {
     },
     body: JSON.stringify({ query: jsonToGraphQLQuery({ query }) })
   });
+  console.log(res);
   const { data } = await res.json();
   return data || {};
 }

@@ -7,10 +7,11 @@ import kovan from './kovan.json';
 import polygon from './polygon.json';
 import rinkeby from './rinkeby.json';
 import test from './test.json';
+import testlocal from './testlocal.json';
 
 export interface Config {
   key: string;
-  chainId: Network | 12345 | 17;
+  chainId: Network | 12345 | 17 | 31337;
   chainName: string;
   name: string;
   shortName: string;
@@ -86,7 +87,8 @@ const config: Record<Network | number, Config> = {
   [Network.ARBITRUM]: arbitrum,
   12345: test,
   // @ts-ignore
-  17: docker
+  17: docker,
+  31337: testlocal,
 };
 
 export default config;
